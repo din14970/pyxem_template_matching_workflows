@@ -1,6 +1,10 @@
 tags
 dask-worker-space
-*.hspy
+data/201009A17-FullData4xbin.hspy
+data/210913AverageExport.hspy
+data/Cu-Ag_alloy.hspy
+data/test_image.hspy
+# *.hspy
 *.blo
 *.pickle
 *.png
