@@ -13,8 +13,8 @@ For static views of the notebooks visit:
 
 * <https://nbviewer.org/github/din14970/pyxem_template_matching_workflows/blob/master/210903IndexOptimization.ipynb>
 * <https://nbviewer.org/github/din14970/pyxem_template_matching_workflows/blob/master/210907Benchmarking.ipynb>
-* <https://nbviewer.org/github/din14970/pyxem_template_matching_workflows/blob/master/210910AdvancedIndexing.ipynb >
-* <https://nbviewer.org/github/din14970/pyxem_template_matching_workflows/blob/master/Generating figures.ipynb>
+* <https://nbviewer.org/github/din14970/pyxem_template_matching_workflows/blob/master/210910AdvancedIndexing.ipynb>
+* <https://nbviewer.org/github/din14970/pyxem_template_matching_workflows/blob/master/Generating%20figures.ipynb>
 
 ## Downloading the necessary data
 
@@ -33,8 +33,17 @@ With this option you don't need to download or configure anything else, everythi
 The steps to run the notebooks are:
 
 1. [Download and install Docker Engine for your system](https://docs.docker.com/engine/install/). On Linux, ensure the docker daemon is loaded.
-2. Pull the docker image with the command `$ docker pull nielscautaerts/pyxem_template_matching_workflows`.
-3. Run the docker image with `$ docker run -p 7000:8888 din14970/pyxem_template_matching_workflows`. You can change the 7000 port on local host to any port number you like.
+2. Pull the docker image with the command 
+```
+$ docker pull nielscautaerts/pyxem_template_matching_workflows
+```
+
+3. Run the docker image with
+```
+$ docker run -p 7000:8888 din14970/pyxem_template_matching_workflows
+```
+You can change the 7000 port on local host to any port number you like.
+
 4. Now visit <http://localhost:7000>. Enter and submit the token that you may find in the terminal when you ran the `docker run` command (it's a long string of numbers and letters after `token=`). You should now see all the necessary files.
 
 #### Caveats
@@ -49,9 +58,27 @@ In order to save you some time I have already included an `environment.yml` file
 
 1. Ensure you have `conda` installed, either with [Anaconda](https://www.anaconda.com/products/individual) or [miniconda](https://docs.conda.io/en/latest/miniconda.html). Miniconda is much more light weight and recommended.
 2. Ensure you have [git](https://git-scm.com/downloads) installed.
-3. Clone this repository to a destionation of your choosing with `$ git clone https://github.com/din14970/pyxem_template_matching_workflows.git`
-4. Go inside the repository folder with `cd` and create a new virtual environment from the `environment.yml` file using `conda env create -f environment.yml`
-5. Go out of this folder and clone the repositories for pyxem and diffsims `$ git clone https://github.com/din14970/diffsims.git` and `$ git clone https://github.com/pyxem/pyxem.git`
+3. Clone this repository to a destination of your choosing with
+    ```
+    $ git clone https://github.com/din14970/pyxem_template_matching_workflows.git
+    ```
+
+4. Go inside the repository folder with `cd` and create a new virtual environment from the `environment.yml` file using
+    ```
+    $ conda env create -f environment.yml
+    ```
+
+5. Go out of this folder and clone the repositories for pyxem and diffsims 
+    ```
+    $ git clone https://github.com/din14970/diffsims.git
+    ```
+
+    and 
+
+    ```
+    $ git clone https://github.com/pyxem/pyxem.git
+    ```
+
 6. Go into these respective folders and check out specific commits. Then install the versions in your virtual environment.
     ```
     $ conda activate pyxenv
@@ -62,7 +89,8 @@ In order to save you some time I have already included an `environment.yml` file
     $ git checkout ca4f58de
     $ python3 -m pip install -e .
     ```
-These steps are necessary because the notebooks use specific features which have not yet been packaged into an official version of the software.
+    These steps are necessary because the notebooks use specific features which have not yet been packaged into an official version of the software.
+
 7. You should now be able to launch a Jupyter notebook server with `$ jupyter notebook` and open and run the notebooks. Always ensure the virtual environment is active.
 
 If you want GPU acceleration to work you will need to also install `cupy` with a version >9.0.0.
