@@ -20,6 +20,7 @@ from diffsims.libraries.diffraction_library import load_DiffractionLibrary
 from orix.quaternion.rotation import Rotation
 from orix.vector.vector3d import Vector3d
 from orix.projections import StereographicProjection
+import pyxem.utils.indexation_utils as iutls
 
 
 def hspy_to_blo():
