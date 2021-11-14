@@ -27,4 +27,3 @@ dependencies:
   - pywget=3.2
   - vtk=9.0.3
   - mayavi=4.7.2
-prefix: /home/din14970/miniconda3/envs/pyxenv
