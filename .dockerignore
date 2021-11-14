@@ -1,0 +1,5 @@
+.git
+.ipynb_checkpoints
+*.pickle
+*.blo
+tags
