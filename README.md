@@ -34,15 +34,15 @@ The steps to run the notebooks are:
 
 1. [Download and install Docker Engine for your system](https://docs.docker.com/engine/install/). On Linux, ensure the docker daemon is loaded.
 2. Pull the docker image with the command 
-```
-$ docker pull nielscautaerts/pyxem_template_matching_workflows
-```
+    ```
+    $ docker pull nielscautaerts/pyxem_template_matching_workflows
+    ```
 
 3. Run the docker image with
-```
-$ docker run -p 7000:8888 din14970/pyxem_template_matching_workflows
-```
-You can change the 7000 port on local host to any port number you like.
+    ```
+    $ docker run -p 7000:8888 din14970/pyxem_template_matching_workflows
+    ```
+    You can change the 7000 port on local host to any port number you like.
 
 4. Now visit <http://localhost:7000>. Enter and submit the token that you may find in the terminal when you ran the `docker run` command (it's a long string of numbers and letters after `token=`). You should now see all the necessary files.
 
