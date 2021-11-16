@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/425115743.svg)](https://zenodo.org/badge/latestdoi/425115743)
 
-This repository contains all the Jupyter notebook files and other files necessary to reproduce the results and figures in the paper *"Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem"* which was recently submitted to the journal *Ultramicroscopy*; arXiv preprint details are pending.
+This repository contains all the Jupyter notebook files and other files necessary to reproduce the results and figures in the paper *"Free, flexible and fast: orientation mapping using the multi-core and GPU-accelerated template matching capabilities in the python-based open source 4D-STEM analysis toolbox Pyxem"* which was recently submitted to the journal *Ultramicroscopy*. The paper preprint is available on [arXiv](https://arxiv.org/abs/2111.07347).
 
 What these notebooks show:
 * how to use diffsims, orix, and pyxem to perform template matching on a precession electron diffraction (PED) or nanobeam electron diffraction (NBED) dataset. 
