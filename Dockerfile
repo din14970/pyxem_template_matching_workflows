@@ -42,8 +42,8 @@ RUN conda init bash && \
                                  matplotlib-scalebar=0.7.2 \
                                  scikit-learn=0.24.2 \
                                  lmfit=1.0.2 \
-                                 numpy=1.21.2 \
-                                 numba=0.53.1 \
+                                 numpy=1.20.3 \
+                                 numba=0.55.1 \
                                  psutil=5.8.0 \
                                  ipywidgets=7.6.5 \
                                  ipyevents=2.0.1 \
@@ -51,10 +51,10 @@ RUN conda init bash && \
                                  diffpy.structure=3.0.1 \
                                  tqdm=4.62.2 \
                                  transforms3d=0.3.1 \
-                                 orix=0.7.0 \
-                                 dask=2021.7.1 \
+                                 orix=0.8.2 \
+                                 dask=2021.9.1 \
                                  h5py=3.3.0 \
-                                 hyperspy=1.6.4 \
+                                 hyperspy=1.6.5 \
                                  pywget=3.2 \
                                  vtk=9.0.3
 
@@ -66,12 +66,12 @@ RUN conda init bash && . /root/.bashrc && conda activate venv && \
 
 # installing the custom packages
 RUN conda init bash && . /root/.bashrc && conda activate venv && \
-    git clone https://github.com/din14970/diffsims.git \
-    && cd diffsims && git checkout 29b0715 && pip install -e .
+    git clone https://github.com/pyxem/diffsims.git \
+    && cd diffsims && git checkout 2b75329 && pip install -e .
 
 RUN conda init bash && . /root/.bashrc && conda activate venv && \
     git clone https://github.com/pyxem/pyxem.git \
-    && cd pyxem && git checkout ca4f58de && pip install -e .
+    && cd pyxem && git checkout 30ddc1f5 && pip install -e .
 
 # Add Tini
 ENV TINI_VERSION v0.19.0

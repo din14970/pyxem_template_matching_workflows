@@ -72,7 +72,7 @@ In order to save you some time I have already included an `environment.yml` file
 
 5. Go out of this folder and clone the repositories for pyxem and diffsims 
     ```
-    $ git clone https://github.com/din14970/diffsims.git
+    $ git clone https://github.com/pyxem/diffsims.git
     ```
 
     and 
@@ -85,10 +85,10 @@ In order to save you some time I have already included an `environment.yml` file
     ```
     $ conda activate pyxenv
     $ cd diffsims
-    $ git checkout 29b0715
+    $ git checkout 2b75329 
     $ python3 -m pip install -e .
     $ cd ../pyxem
-    $ git checkout ca4f58de
+    $ git checkout 30ddc1f5
     $ python3 -m pip install -e .
     ```
     These steps are necessary because the notebooks use specific features which have not yet been packaged into an official version of the software.
@@ -96,8 +96,8 @@ In order to save you some time I have already included an `environment.yml` file
 7. You should now be able to launch a Jupyter notebook server with `$ jupyter notebook` and open and run the notebooks. Always ensure the virtual environment is active.
 
 If you want GPU acceleration to work you will need to also install `cupy` with a version >9.0.0.
-Additionally you may have to install the appropriate NVIDIA drivers.
+Additionally you may have to install the appropriate NVIDIA drivers and the cuda toolkit.
 If you can import `cupy` in a notebook and create an array with `cupy.array([1, 2, 3])` without errors, the GPU acceleration should work.
 
 If Mayavi doesn't work on your system you may have to do some digging on required system packages.
-Pyxem does not rely on Mayavi, only one image uses this package.
+Pyxem does not rely on Mayavi, only one image from the paper relies on this package.
